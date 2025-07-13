@@ -5,21 +5,23 @@ import { malAnimeData } from "@/pages/constants/malAnimeData";
 import { alIds, getAnimeTitle, malIds } from "@/pages/utils/animeDataGetters";
 import { alAnimeData } from "@/pages/constants/anilistAnimeData";
 import { copyImage, downloadImage } from "../utils/imageUtils";
-import { siteName, siteUrl } from "../constants/brand";
 import { GeneralActions } from "@/pages/ui/GeneralActions";
+import GeneralSettings from "./GeneralSettings";
+import ListHeader from "./ListHeader";
 
-export const MainPage = () => {
+
+const MainPage = () => {
   const [selectedAnime, setSelectedAnime] = useLocalStorage<number[]>(
     "selectedAnimeIds",
     []
   );
 
-  const [dataSource, setDataSource] = useLocalStorage<"mal" | "anilist">(
+  const [dataSource] = useLocalStorage<"mal" | "anilist">(
     "dataSource",
     "mal"
   );
 
-  const [lang, setLang] = useLocalStorage<"romaji" | "russian">(
+  const [lang] = useLocalStorage<"romaji" | "russian">(
     "lang",
     "romaji"
   );
@@ -80,74 +82,16 @@ export const MainPage = () => {
     <>
       <div className="flex flex-col gap-4 pb-10">
         <div className="p-4 flex flex-col md:items-center">
-          <div className="flex justify-end mb-4 gap-4">
-            <div className="flex items-center gap-2">
-              <span className="text-sm text-gray-600">Source of data:</span>
-              <button
-                className={`px-3 py-1 text-sm rounded transition-colors ${
-                  dataSource === "mal"
-                    ? "bg-blue-500 text-white"
-                    : "bg-gray-200 text-gray-700 hover:bg-gray-300"
-                }`}
-                onClick={() => setDataSource("mal")}
-              >
-                MyAnimeList
-              </button>
-              <button
-                className={`px-3 py-1 text-sm rounded transition-colors ${
-                  dataSource === "anilist"
-                    ? "bg-blue-500 text-white"
-                    : "bg-gray-200 text-gray-700 hover:bg-gray-300"
-                }`}
-                onClick={() => setDataSource("anilist")}
-              >
-                AniList
-              </button>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="text-sm text-gray-600">Title language:</span>
-              <button
-                className={`px-3 py-1 text-sm rounded transition-colors ${
-                  lang === "romaji"
-                    ? "bg-blue-500 text-white"
-                    : "bg-gray-200 text-gray-700 hover:bg-gray-300"
-                }`}
-                onClick={() => setLang("romaji")}
-              >
-                Romaji
-              </button>
-              <button
-                className={`px-3 py-1 text-sm rounded transition-colors ${
-                  lang === "russian"
-                    ? "bg-blue-500 text-white"
-                    : "bg-gray-200 text-gray-700 hover:bg-gray-300"
-                }`}
-                onClick={() => setLang("russian")}
-              >
-                Russian
-              </button>
-            </div>
-          </div>
+          <GeneralSettings />
           <div className="w-full overflow-x-auto">
             <div
               className="flex flex-col border border-b-0 bg-white w-fit mx-auto"
               ref={wrapper}
             >
-              <div className="border-b justify-between p-2 text-lg  font-bold flex">
-                <h1>
-                  {siteName}
-                  <span className="remove">
-                    {" "}
-                    - Click to select anime you have watched
-                  </span>
-                  <span className="ml-2 text-zinc-400 font-medium">
-                    {siteUrl}
-                  </span>
-                </h1>
-                <span className="shrink-0 whitespace-nowrap">
-                  I have watched {selectedAnimeSize}/{totalAnime} anime
-                </span>
-              </div>
+                <ListHeader
+                    selectedAnimeSize={selectedAnimeSize}
+                    totalAnime={totalAnime}
+                />
               {Object.keys(animeData).map((year) => {
                 const items = animeData[year as keyof typeof animeData] || [];
                 return (
@@ -244,3 +188,5 @@ export const MainPage = () => {
     </>
   );
 };
+
+export default MainPage;

@@ -1,6 +1,8 @@
-import { MainPage } from "@/pages/ui/MainPage"
 import Head from 'next/head'
 import { siteName } from "@/pages/constants/brand";
+import dynamic from "next/dynamic";
+
+const MainPage = dynamic(() => import("@/pages/ui/MainPage"), {ssr: false})
 
 export default function Home() {
   return (
