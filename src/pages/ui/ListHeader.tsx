@@ -14,8 +14,7 @@ const ListHeader = ({selectedAnimeSize, totalAnime}: Props) => {
                 <div>
                     {siteName}
                 </div>
-  
-                <div>
+                <div className="remove">
                     — Click to select anime you have watched
                 </div>
                 <div className="text-zinc-400 font-medium">

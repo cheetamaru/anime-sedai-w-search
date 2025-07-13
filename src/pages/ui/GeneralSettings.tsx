@@ -5,7 +5,7 @@ import { useDataSourceStorage } from "../hooks/useDataSourceStorage";
 import { useAnimeTitleLangStorage } from "../hooks/useAnimeTitleLangStorage";
 import { AnimeTitleLang, isRomajiTitleLang, isRussianTitleLang } from "../domain/AnimeTitleLang";
 
-const GeneralSettings: React.FC = () => {
+const GeneralSettings = () => {
     const [dataSource, setDataSource] = useDataSourceStorage();
     const [lang, setLang] = useAnimeTitleLangStorage();
 
