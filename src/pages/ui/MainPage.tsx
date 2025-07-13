@@ -1,10 +1,11 @@
 import { useRef } from "react";
 import { toast, Toaster } from "sonner";
 import { useLocalStorage } from "usehooks-ts";
-import { malAnimeData } from "@/pages/constants/mal_anime_data";
-import { alIds, getAnimeTitle, malIds } from "@/pages/utils/anime_data_getters";
-import { alAnimeData } from "@/pages/constants/anilist_anime_data";
-import { copyImage, downloadImage } from "../utils/image_utils";
+import { malAnimeData } from "@/pages/constants/malAnimeData";
+import { alIds, getAnimeTitle, malIds } from "@/pages/utils/animeDataGetters";
+import { alAnimeData } from "@/pages/constants/anilistAnimeData";
+import { copyImage, downloadImage } from "../utils/imageUtils";
+import { siteName, siteUrl } from "../constants/brand";
 
 export const MainPage = () => {
   const [selectedAnime, setSelectedAnime] = useLocalStorage<number[]>(
@@ -133,13 +134,13 @@ export const MainPage = () => {
             >
               <div className="border-b justify-between p-2 text-lg  font-bold flex">
                 <h1>
-                  Anime Sedai w/ Search
+                  {siteName}
                   <span className="remove">
                     {" "}
                     - Click to select anime you have watched
                   </span>
                   <span className="ml-2 text-zinc-400 font-medium">
-                    anime-sedai-w-search.vercel.app
+                    {siteUrl}
                   </span>
                 </h1>
                 <span className="shrink-0 whitespace-nowrap">

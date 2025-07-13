@@ -1,4 +1,6 @@
-export const namesRu = new Map([
+import { AnimeDataItem } from "@/pages/types/AnimeDataItem";
+
+export const namesRu = new Map<AnimeDataItem['id'], AnimeDataItem['title']>([
     [19, "Монстр"],
     [205, "Самурай Чамплу"],
     [57, "Бек"],

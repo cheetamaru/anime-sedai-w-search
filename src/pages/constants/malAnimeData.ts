@@ -1,4 +1,6 @@
-export const alAnimeData = {
+import { AnimeDataCollection } from "@/pages/types/AnimeDataCollection";
+
+export const malAnimeData: AnimeDataCollection = {
     "2000": [
       {
         id: 227,
@@ -6,53 +8,53 @@ export const alAnimeData = {
       },
       {
         id: 249,
-        title: "Inuyasha",
+        title: "InuYasha",
       },
       {
         id: 263,
-        title: "Hajime no Ippo: THE FIGHTING!",
-      },
-      {
-        id: 481,
-        title: "Yu☆Gi☆Oh! Duel Monsters",
-      },
-      {
-        id: 1281,
-        title: "Gakkou no Kaidan",
+        title: "Hajime no Ippo",
       },
       {
         id: 189,
         title: "Love Hina",
       },
       {
+        id: 1281,
+        title: "Gakkou no Kaidan",
+      },
+      {
         id: 369,
-        title: "Boogiepop wa Warawanai: Boogiepop Phantom",
+        title: "Boogiepop wa Warawanai",
       },
       {
         id: 243,
         title: "Gravitation",
       },
       {
-        id: 800,
-        title: "NieA Under 7",
-      },
-      {
         id: 180,
         title: "Vandread",
+      },
+      {
+        id: 104,
+        title: "Ayashi no Ceres",
       },
       {
         id: 508,
         title: "Tottoko Hamtarou",
       },
       {
-        id: 221,
-        title: "Mezzo Forte",
+        id: 553,
+        title: "Yami no Matsuei",
+      },
+      {
+        id: 129,
+        title: "Gensoumaden Saiyuuki",
       },
     ],
     "2001": [
       {
         id: 270,
-        title: "HELLSING",
+        title: "Hellsing",
       },
       {
         id: 120,
@@ -63,20 +65,16 @@ export const alAnimeData = {
         title: "Shaman King",
       },
       {
+        id: 22,
+        title: "Tennis no Oujisama",
+      },
+      {
         id: 287,
         title: "Grappler Baki (TV)",
       },
       {
-        id: 22,
-        title: "Tennis no Ouji-sama",
-      },
-      {
         id: 135,
         title: "Hikaru no Go",
-      },
-      {
-        id: 601,
-        title: "Nekojiru-sou",
       },
       {
         id: 272,
@@ -88,33 +86,29 @@ export const alAnimeData = {
       },
       {
         id: 246,
-        title: "GROOVE ADVENTURE RAVE",
+        title: "Groove Adventure Rave",
       },
       {
-        id: 1177,
-        title: "Alien 9",
+        id: 156,
+        title: "X",
       },
       {
-        id: 208,
-        title: "R.O.D -READ OR DIE-",
+        id: 168,
+        title: "s.CRY.ed",
+      },
+      {
+        id: 601,
+        title: "Nekojiru-sou",
       },
     ],
     "2002": [
       {
         id: 20,
-        title: "NARUTO",
-      },
-      {
-        id: 66,
-        title: "Azumanga Daiou THE ANIMATION",
+        title: "Naruto",
       },
       {
         id: 71,
         title: "Full Metal Panic!",
-      },
-      {
-        id: 387,
-        title: "Haibane Renmei",
       },
       {
         id: 59,
@@ -122,7 +116,27 @@ export const alAnimeData = {
       },
       {
         id: 467,
-        title: "Koukaku Kidoutai: STAND ALONE COMPLEX",
+        title: "Koukaku Kidoutai: Stand Alone Complex",
+      },
+      {
+        id: 66,
+        title: "Azumanga Daiou The Animation",
+      },
+      {
+        id: 387,
+        title: "Haibane Renmei",
+      },
+      {
+        id: 1564,
+        title: "Pokemon Advanced Generation",
+      },
+      {
+        id: 48,
+        title: ".hack//Sign",
+      },
+      {
+        id: 195,
+        title: "Onegai☆Teacher",
       },
       {
         id: 721,
@@ -133,100 +147,88 @@ export const alAnimeData = {
         title: "Juuni Kokuki",
       },
       {
-        id: 256,
-        title: "Hoshi no Koe",
-      },
-      {
-        id: 48,
-        title: ".hack//SIGN",
-      },
-      {
         id: 687,
         title: "Tokyo Mew Mew",
-      },
-      {
-        id: 93,
-        title: "Kidou Senshi Gundam SEED",
       },
     ],
     "2003": [
       {
         id: 121,
-        title: "Hagane no Renkinjutsushi",
-      },
-      {
-        id: 486,
-        title: "Kino no Tabi: the Beautiful World",
-      },
-      {
-        id: 26,
-        title: "TEXHNOLYZE",
-      },
-      {
-        id: 329,
-        title: "Planetes",
+        title: "Fullmetal Alchemist",
       },
       {
         id: 202,
         title: "Wolf's Rain",
       },
       {
-        id: 134,
-        title: "GUNSLINGER GIRL",
+        id: 486,
+        title: "Kino no Tabi: The Beautiful World",
       },
       {
-        id: 267,
-        title: "Gungrave",
+        id: 26,
+        title: "Texhnolyze",
       },
       {
-        id: 114,
-        title: "Sakigake!! Cromartie Koukou",
-      },
-      {
-        id: 169,
-        title: "Shingetsutan Tsukihime",
-      },
-      {
-        id: 97,
-        title: "Last Exile",
+        id: 329,
+        title: "Planetes",
       },
       {
         id: 60,
         title: "Chrno Crusade",
       },
       {
-        id: 257,
-        title: "Ikkitousen",
+        id: 267,
+        title: "Gungrave",
+      },
+      {
+        id: 134,
+        title: "Gunslinger Girl",
+      },
+      {
+        id: 61,
+        title: "D.N.Angel",
+      },
+      {
+        id: 97,
+        title: "Last Exile",
+      },
+      {
+        id: 169,
+        title: "Shingetsutan Tsukihime",
+      },
+      {
+        id: 114,
+        title: "Sakigake!! Cromartie Koukou",
       },
     ],
     "2004": [
       {
         id: 269,
-        title: "BLEACH",
-      },
-      {
-        id: 19,
-        title: "MONSTER",
-      },
-      {
-        id: 205,
-        title: "Samurai Champloo",
+        title: "Bleach",
       },
       {
         id: 226,
         title: "Elfen Lied",
       },
       {
+        id: 205,
+        title: "Samurai Champloo",
+      },
+      {
+        id: 19,
+        title: "Monster",
+      },
+      {
         id: 323,
         title: "Mousou Dairinin",
       },
       {
-        id: 57,
-        title: "BECK",
+        id: 384,
+        title: "Gantz",
       },
       {
-        id: 384,
-        title: "GANTZ",
+        id: 57,
+        title: "Beck",
       },
       {
         id: 24,
@@ -237,12 +239,12 @@ export const alAnimeData = {
         title: "Gankutsuou",
       },
       {
-        id: 240,
-        title: "Genshiken",
-      },
-      {
         id: 64,
         title: "Rozen Maiden",
+      },
+      {
+        id: 240,
+        title: "Genshiken",
       },
       {
         id: 330,
@@ -263,90 +265,90 @@ export const alAnimeData = {
         title: "Koukyoushihen Eureka Seven",
       },
       {
+        id: 150,
+        title: "Blood+",
+      },
+      {
         id: 228,
         title: "Jigoku Shoujo",
       },
       {
-        id: 150,
-        title: "BLOOD+",
+        id: 101,
+        title: "Air",
       },
       {
         id: 16,
         title: "Hachimitsu to Clover",
       },
       {
+        id: 68,
+        title: "Black Cat",
+      },
+      {
         id: 322,
         title: "Paradise Kiss",
       },
       {
-        id: 477,
-        title: "ARIA The ANIMATION",
-      },
-      {
-        id: 101,
-        title: "AIR",
-      },
-      {
-        id: 79,
-        title: "SHUFFLE!",
+        id: 177,
+        title: "Tsubasa Chronicle",
       },
       {
         id: 357,
         title: "Bokusatsu Tenshi Dokuro-chan",
       },
       {
-        id: 68,
-        title: "Black Cat",
+        id: 67,
+        title: "Basilisk: Kouga Ninpou Chou",
       },
     ],
     "2006": [
       {
         id: 1535,
-        title: "DEATH NOTE",
+        title: "Death Note",
       },
       {
         id: 1575,
         title: "Code Geass: Hangyaku no Lelouch",
       },
       {
-        id: 918,
-        title: "Gintama",
-      },
-      {
         id: 853,
         title: "Ouran Koukou Host Club",
       },
       {
+        id: 918,
+        title: "Gintama",
+      },
+      {
         id: 889,
-        title: "BLACK LAGOON",
+        title: "Black Lagoon",
       },
       {
-        id: 849,
-        title: "Suzumiya Haruhi no Yuuutsu",
-      },
-      {
-        id: 877,
-        title: "NANA",
-      },
-      {
-        id: 1210,
-        title: "NHK ni Youkoso!",
+        id: 777,
+        title: "Hellsing Ultimate",
       },
       {
         id: 356,
         title: "Fate/stay night",
       },
       {
-        id: 934,
-        title: "Higurashi no Naku Koro ni",
-      },
-      {
-        id: 777,
-        title: "HELLSING OVA",
+        id: 849,
+        title: "Suzumiya Haruhi no Yuuutsu",
       },
       {
         id: 1195,
         title: "Zero no Tsukaima",
+      },
+      {
+        id: 934,
+        title: "Higurashi no Naku Koro ni",
+      },
+      {
+        id: 1210,
+        title: "NHK ni Youkoso!",
+      },
+      {
+        id: 877,
+        title: "Nana",
       },
     ],
     "2007": [
@@ -356,47 +358,47 @@ export const alAnimeData = {
       },
       {
         id: 2167,
-        title: "CLANNAD",
+        title: "Clannad",
       },
       {
         id: 2251,
         title: "Baccano!",
       },
       {
-        id: 2025,
-        title: "DARKER THAN BLACK: Kuro no Keiyakusha",
+        id: 1818,
+        title: "Claymore",
+      },
+      {
+        id: 2476,
+        title: "School Days",
       },
       {
         id: 1887,
         title: "Lucky☆Star",
       },
       {
-        id: 2476,
-        title: "School Days (TV)",
-      },
-      {
         id: 2034,
         title: "Lovely★Complex",
       },
       {
-        id: 1818,
-        title: "CLAYMORE",
+        id: 1691,
+        title: "Kaze no Stigma",
       },
       {
-        id: 3002,
-        title: "Gyakkyou Burai Kaiji: Ultimate Survivor",
-      },
-      {
-        id: 2246,
-        title: "Mononoke",
+        id: 1292,
+        title: "Afro Samurai",
       },
       {
         id: 2605,
         title: "Sayonara Zetsubou Sensei",
       },
       {
-        id: 1292,
-        title: "Afro Samurai",
+        id: 2246,
+        title: "Mononoke",
+      },
+      {
+        id: 2104,
+        title: "Seto no Hanayome",
       },
     ],
     "2008": [
@@ -413,50 +415,50 @@ export const alAnimeData = {
         title: "Kuroshitsuji",
       },
       {
-        id: 4654,
-        title: "Toaru Majutsu no Index",
-      },
-      {
         id: 2966,
         title: "Ookami to Koushinryou",
       },
       {
-        id: 3455,
-        title: "To LOVE-Ru",
-      },
-      {
-        id: 4081,
-        title: "Natsume Yuujinchou",
+        id: 4654,
+        title: "Toaru Majutsu no Index",
       },
       {
         id: 2993,
         title: "Rosario to Vampire",
       },
       {
+        id: 3455,
+        title: "To LOVE-Ru",
+      },
+      {
         id: 3457,
         title: "Vampire Knight",
       },
       {
-        id: 5042,
-        title: "kiss×sis",
-      },
-      {
-        id: 4063,
-        title: "Sekirei",
+        id: 4081,
+        title: "Natsume Yuujinchou",
       },
       {
         id: 3470,
         title: "Special A",
       },
+      {
+        id: 4975,
+        title: "ChäoS;HEAd",
+      },
+      {
+        id: 3731,
+        title: "Itazura na Kiss",
+      },
     ],
     "2009": [
       {
         id: 5114,
-        title: "Hagane no Renkinjutsushi: FULLMETAL ALCHEMIST",
+        title: "Fullmetal Alchemist: Brotherhood",
       },
       {
         id: 6702,
-        title: "FAIRY TAIL",
+        title: "Fairy Tail",
       },
       {
         id: 5081,
@@ -464,7 +466,7 @@ export const alAnimeData = {
       },
       {
         id: 5680,
-        title: "K-ON!",
+        title: "K-On!",
       },
       {
         id: 6045,
@@ -475,16 +477,8 @@ export const alAnimeData = {
         title: "Toaru Kagaku no Railgun",
       },
       {
-        id: 4382,
-        title: "Suzumiya Haruhi no Yuuutsu (2009)",
-      },
-      {
         id: 5630,
         title: "Higashi no Eden",
-      },
-      {
-        id: 5958,
-        title: "Sora no Otoshimono",
       },
       {
         id: 5530,
@@ -495,14 +489,26 @@ export const alAnimeData = {
         title: "Tokyo Magnitude 8.0",
       },
       {
-        id: 5682,
-        title: "Phantom: Requiem for the Phantom",
+        id: 6512,
+        title: "Nyan Koi!",
+      },
+      {
+        id: 5060,
+        title: "Hetalia Axis Powers",
+      },
+      {
+        id: 6682,
+        title: "11eyes",
       },
     ],
     "2010": [
       {
         id: 6547,
         title: "Angel Beats!",
+      },
+      {
+        id: 8074,
+        title: "Highschool of the Dead",
       },
       {
         id: 6746,
@@ -513,36 +519,32 @@ export const alAnimeData = {
         title: "Kaichou wa Maid-sama!",
       },
       {
-        id: 8074,
-        title: "Gakuen Mokushiroku: HIGHSCHOOL OF THE DEAD",
-      },
-      {
         id: 8769,
-        title: "Ore no Imouto ga Konna ni Kawaii Wake ga Nai",
+        title: "Ore no Imouto ga Konnani Kawaii Wake ga Nai",
       },
       {
-        id: 7785,
-        title: "Yojouhan Shinwa Taikei",
-      },
-      {
-        id: 6594,
-        title: "Katanagatari",
+        id: 6347,
+        title: "Baka to Test to Shoukanjuu",
       },
       {
         id: 8525,
         title: "Kami nomi zo Shiru Sekai",
       },
       {
-        id: 7724,
-        title: "Shiki",
-      },
-      {
         id: 7674,
         title: "Bakuman.",
       },
       {
-        id: 6347,
-        title: "Baka to Test to Shoukanjuu",
+        id: 7724,
+        title: "Shiki",
+      },
+      {
+        id: 6594,
+        title: "Katanagatari",
+      },
+      {
+        id: 7088,
+        title: "Ichiban Ushiro no Daimaou",
       },
       {
         id: 8675,
@@ -552,19 +554,19 @@ export const alAnimeData = {
     "2011": [
       {
         id: 11061,
-        title: "HUNTER×HUNTER (2011)",
+        title: "Hunter x Hunter (2011)",
       },
       {
         id: 9253,
         title: "Steins;Gate",
       },
       {
-        id: 9919,
-        title: "Ao no Exorcist",
+        id: 10620,
+        title: "Mirai Nikki (TV)",
       },
       {
-        id: 10620,
-        title: "Mirai Nikki",
+        id: 9919,
+        title: "Ao no Exorcist",
       },
       {
         id: 9989,
@@ -576,7 +578,7 @@ export const alAnimeData = {
       },
       {
         id: 9756,
-        title: "Mahou Shoujo Madoka☆Magica",
+        title: "Mahou Shoujo Madoka★Magica",
       },
       {
         id: 6880,
@@ -614,7 +616,11 @@ export const alAnimeData = {
       },
       {
         id: 13601,
-        title: "PSYCHO-PASS",
+        title: "Psycho-Pass",
+      },
+      {
+        id: 11617,
+        title: "High School DxD",
       },
       {
         id: 12189,
@@ -625,16 +631,12 @@ export const alAnimeData = {
         title: "Chuunibyou demo Koi ga Shitai!",
       },
       {
-        id: 11617,
-        title: "High School DxD",
+        id: 13759,
+        title: "Sakura-sou no Pet na Kanojo",
       },
       {
         id: 11771,
         title: "Kuroko no Basket",
-      },
-      {
-        id: 13759,
-        title: "Sakurasou no Pet na Kanojo",
       },
       {
         id: 14227,
@@ -642,11 +644,11 @@ export const alAnimeData = {
       },
       {
         id: 14513,
-        title: "Magi: The labyrinth of magic",
+        title: "Magi: The Labyrinth of Magic",
       },
       {
-        id: 11843,
-        title: "Danshi Koukousei no Nichijou",
+        id: 14345,
+        title: "Btooom!",
       },
     ],
     "2013": [
@@ -664,11 +666,15 @@ export const alAnimeData = {
       },
       {
         id: 14813,
-        title: "Yahari Ore no Seishun Love Come wa Machigatteiru.",
+        title: "Yahari Ore no Seishun Love Comedy wa Machigatteiru.",
       },
       {
         id: 18153,
         title: "Kyoukai no Kanata",
+      },
+      {
+        id: 17265,
+        title: "Log Horizon",
       },
       {
         id: 17895,
@@ -679,25 +685,21 @@ export const alAnimeData = {
         title: "Date A Live",
       },
       {
-        id: 17265,
-        title: "Log Horizon",
-      },
-      {
         id: 16592,
         title:
-          "Danganronpa: Kibou no Gakuen to Zetsubou no Koukousei - The Animation",
+          "Danganronpa: Kibou no Gakuen to Zetsubou no Koukousei The Animation",
       },
       {
         id: 18507,
         title: "Free!",
       },
       {
-        id: 16742,
-        title: "Watashi ga Motenai no wa Dou Kangaetemo Omaera ga Warui!",
-      },
-      {
         id: 11633,
         title: "Blood Lad",
+      },
+      {
+        id: 18277,
+        title: "Strike the Blood",
       },
     ],
     "2014": [
@@ -706,20 +708,16 @@ export const alAnimeData = {
         title: "Tokyo Ghoul",
       },
       {
+        id: 19815,
+        title: "No Game No Life",
+      },
+      {
         id: 23273,
         title: "Shigatsu wa Kimi no Uso",
       },
       {
-        id: 20583,
-        title: "Haikyuu!!",
-      },
-      {
         id: 20507,
         title: "Noragami",
-      },
-      {
-        id: 19815,
-        title: "No Game No Life",
       },
       {
         id: 22199,
@@ -728,6 +726,10 @@ export const alAnimeData = {
       {
         id: 23755,
         title: "Nanatsu no Taizai",
+      },
+      {
+        id: 20583,
+        title: "Haikyuu!!",
       },
       {
         id: 22535,
@@ -764,40 +766,40 @@ export const alAnimeData = {
         title: "Death Parade",
       },
       {
-        id: 28999,
-        title: "Charlotte",
-      },
-      {
         id: 28171,
         title: "Shokugeki no Souma",
       },
       {
-        id: 28121,
-        title: "Dungeon ni Deai wo Motomeru no wa Machigatteiru Darou ka",
+        id: 28999,
+        title: "Charlotte",
       },
       {
         id: 29803,
         title: "Overlord",
       },
       {
+        id: 28121,
+        title: "Dungeon ni Deai wo Motomeru no wa Machigatteiru Darou ka",
+      },
+      {
         id: 26243,
         title: "Owari no Seraph",
-      },
-      {
-        id: 27775,
-        title: "Plastic Memories",
-      },
-      {
-        id: 30240,
-        title: "Prison School",
       },
       {
         id: 30296,
         title: "Rakudai Kishi no Cavalry",
       },
       {
+        id: 27775,
+        title: "Plastic Memories",
+      },
+      {
         id: 24439,
         title: "Kekkai Sensen",
+      },
+      {
+        id: 28907,
+        title: "Gate: Jieitai Kanochi nite, Kaku Tatakaeri",
       },
     ],
     "2016": [
@@ -806,16 +808,16 @@ export const alAnimeData = {
         title: "Boku no Hero Academia",
       },
       {
+        id: 31240,
+        title: "Re:Zero kara Hajimeru Isekai Seikatsu",
+      },
+      {
         id: 32182,
         title: "Mob Psycho 100",
       },
       {
         id: 31043,
         title: "Boku dake ga Inai Machi",
-      },
-      {
-        id: 31240,
-        title: "Re:Zero kara Hajimeru Isekai Seikatsu",
       },
       {
         id: 30831,
@@ -835,19 +837,19 @@ export const alAnimeData = {
       },
       {
         id: 32995,
-        title: "Yuuri!!! on ICE",
+        title: "Yuri!!! on Ice",
       },
       {
         id: 32729,
-        title: "orange",
+        title: "Orange",
       },
       {
-        id: 31646,
-        title: "3-gatsu no Lion",
+        id: 28623,
+        title: "Koutetsujou no Kabaneri",
       },
       {
-        id: 31798,
-        title: "Kiznaiver",
+        id: 32542,
+        title: "Sakamoto desu ga?",
       },
     ],
     "2017": [
@@ -860,16 +862,16 @@ export const alAnimeData = {
         title: "Kakegurui",
       },
       {
-        id: 35507,
-        title: "Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e",
-      },
-      {
         id: 34599,
         title: "Made in Abyss",
       },
       {
+        id: 35507,
+        title: "Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e",
+      },
+      {
         id: 33206,
-        title: "Kobayashi-san Chi no Maidragon",
+        title: "Kobayashi-san Chi no Maid Dragon",
       },
       {
         id: 32615,
@@ -888,38 +890,42 @@ export const alAnimeData = {
         title: "Tsurezure Children",
       },
       {
-        id: 32951,
-        title: "Rokudenashi Majutsu Koushi to Akashic Records",
-      },
-      {
         id: 32901,
-        title: "Eromanga Sensei",
+        title: "Eromanga-sensei",
       },
       {
-        id: 34618,
-        title: "Blend S",
+        id: 32949,
+        title: "Kuzu no Honkai",
+      },
+      {
+        id: 33489,
+        title: "Little Witch Academia (TV)",
       },
     ],
     "2018": [
-      {
-        id: 37450,
-        title: "Seishun Buta Yarou wa Bunny Girl Senpai no Yume wo Minai",
-      },
       {
         id: 33352,
         title: "Violet Evergarden",
       },
       {
+        id: 37450,
+        title: "Seishun Buta Yarou wa Bunny Girl Senpai no Yume wo Minai",
+      },
+      {
         id: 35849,
-        title: "Darling in the Franxx",
+        title: "Darling in the FranXX",
       },
       {
         id: 37430,
-        title: "Tensei Shitara Slime Datta Ken",
+        title: "Tensei shitara Slime Datta Ken",
       },
       {
         id: 35120,
-        title: "DEVILMAN crybaby",
+        title: "Devilman: Crybaby",
+      },
+      {
+        id: 37349,
+        title: "Goblin Slayer",
       },
       {
         id: 35968,
@@ -927,27 +933,23 @@ export const alAnimeData = {
       },
       {
         id: 36649,
-        title: "BANANA FISH",
-      },
-      {
-        id: 37349,
-        title: "Goblin Slayer",
-      },
-      {
-        id: 35994,
-        title: "Satsuriku no Tenshi",
+        title: "Banana Fish",
       },
       {
         id: 37105,
         title: "Grand Blue",
       },
       {
+        id: 35994,
+        title: "Satsuriku no Tenshi",
+      },
+      {
         id: 37141,
         title: "Hataraku Saibou",
       },
       {
-        id: 37210,
-        title: "Isekai Maou to Shoukan Shoujo no Dorei Majutsu",
+        id: 36475,
+        title: "Sword Art Online Alternative: Gun Gale Online",
       },
     ],
     "2019": [
@@ -960,44 +962,44 @@ export const alAnimeData = {
         title: "Yakusoku no Neverland",
       },
       {
-        id: 37999,
-        title: "Kaguya-sama wa Kokurasetai: Tensaitachi no Renai Zunousen",
-      },
-      {
         id: 38691,
-        title: "Dr. STONE",
+        title: "Dr. Stone",
       },
       {
-        id: 37521,
-        title: "VINLAND SAGA",
-      },
-      {
-        id: 38671,
-        title: "Enen no Shouboutai",
+        id: 37999,
+        title: "Kaguya-sama wa Kokurasetai: Tensai-tachi no Renai Zunousen",
       },
       {
         id: 35790,
         title: "Tate no Yuusha no Nariagari",
       },
       {
+        id: 37521,
+        title: "Vinland Saga",
+      },
+      {
+        id: 38671,
+        title: "Enen no Shouboutai",
+      },
+      {
         id: 37520,
         title: "Dororo",
       },
       {
-        id: 38680,
-        title: "Fruits Basket: 1st Season",
-      },
-      {
         id: 38101,
-        title: "Go-toubun no Hanayome",
+        title: "5-toubun no Hanayome",
       },
       {
         id: 39195,
-        title: "BEASTARS",
+        title: "Beastars",
       },
       {
         id: 37982,
         title: "Domestic na Kanojo",
+      },
+      {
+        id: 36882,
+        title: "Arifureta Shokugyou de Sekai Saikyou",
       },
     ],
     "2020": [
@@ -1006,16 +1008,16 @@ export const alAnimeData = {
         title: "Jujutsu Kaisen",
       },
       {
-        id: 40221,
-        title: "Kami no Tou: Tower of God",
-      },
-      {
         id: 40839,
         title: "Kanojo, Okarishimasu",
       },
       {
+        id: 40221,
+        title: "Kami no Tou",
+      },
+      {
         id: 41353,
-        title: "THE GOD OF HIGH SCHOOL",
+        title: "The God of High School",
       },
       {
         id: 40496,
@@ -1023,33 +1025,33 @@ export const alAnimeData = {
           "Maou Gakuin no Futekigousha: Shijou Saikyou no Maou no Shiso, Tensei shite Shison-tachi no Gakkou e Kayou",
       },
       {
-        id: 39534,
-        title: "Jibaku Shounen Hanako-kun",
-      },
-      {
         id: 41389,
         title: "Tonikaku Kawaii",
       },
       {
         id: 40052,
-        title: "GREAT PRETENDER",
+        title: "Great Pretender",
       },
       {
-        id: 38790,
-        title:
-          "Itai no wa Iya nano de Bougyoryoku ni Kyokufuri Shitai to Omoimasu.",
-      },
-      {
-        id: 38656,
-        title: "Darwin's Game",
+        id: 39534,
+        title: "Jibaku Shounen Hanako-kun",
       },
       {
         id: 38668,
         title: "Dorohedoro",
       },
       {
-        id: 41120,
-        title: "Fugou Keiji: Balance:UNLIMITED",
+        id: 38656,
+        title: "Darwin's Game",
+      },
+      {
+        id: 38790,
+        title:
+          "Itai no wa Iya nanode Bougyoryoku ni Kyokufuri Shitai to Omoimasu.",
+      },
+      {
+        id: 39463,
+        title: "Gleipnir",
       },
     ],
     "2021": [
@@ -1058,48 +1060,48 @@ export const alAnimeData = {
         title: "Horimiya",
       },
       {
-        id: 42249,
-        title: "Tokyo Revengers",
-      },
-      {
         id: 39535,
         title: "Mushoku Tensei: Isekai Ittara Honki Dasu",
       },
       {
+        id: 42249,
+        title: "Tokyo Revengers",
+      },
+      {
         id: 48926,
-        title: "Komi-san wa, Komyushou desu.",
+        title: "Komi-san wa, Comyushou desu.",
       },
       {
         id: 41025,
         title: "Fumetsu no Anata e",
       },
       {
-        id: 43299,
-        title: "Wonder Egg Priority",
-      },
-      {
         id: 41457,
-        title: "86: Eighty Six",
+        title: "86",
       },
       {
         id: 42361,
         title: "Ijiranaide, Nagatoro-san",
       },
       {
-        id: 42923,
-        title: "SK∞",
+        id: 43299,
+        title: "Wonder Egg Priority",
       },
       {
         id: 40834,
         title: "Ousama Ranking",
       },
       {
-        id: 48580,
-        title: "Vanitas no Carte",
-      },
-      {
         id: 40938,
         title: "Hige wo Soru. Soshite Joshikousei wo Hirou.",
+      },
+      {
+        id: 40750,
+        title: "Kaifuku Jutsushi no Yarinaoshi",
+      },
+      {
+        id: 42923,
+        title: "SK∞",
       },
     ],
     "2022": [
@@ -1109,7 +1111,7 @@ export const alAnimeData = {
       },
       {
         id: 50265,
-        title: "SPY×FAMILY",
+        title: "Spy x Family",
       },
       {
         id: 48736,
@@ -1128,20 +1130,16 @@ export const alAnimeData = {
         title: "Kage no Jitsuryokusha ni Naritakute!",
       },
       {
-        id: 50346,
-        title: "Yofukashi no Uta",
-      },
-      {
         id: 47917,
         title: "Bocchi the Rock!",
       },
       {
-        id: 47194,
-        title: "Summer Time Render",
+        id: 50346,
+        title: "Yofukashi no Uta",
       },
       {
-        id: 50709,
-        title: "Lycoris Recoil",
+        id: 47194,
+        title: "Summertime Render",
       },
       {
         id: 45613,
@@ -1151,6 +1149,10 @@ export const alAnimeData = {
         id: 50273,
         title: "Tomodachi Game",
       },
+      {
+        id: 49220,
+        title: "Isekai Ojisan",
+      },
     ],
     "2023": [
       {
@@ -1158,16 +1160,16 @@ export const alAnimeData = {
         title: "Sousou no Frieren",
       },
       {
-        id: 46569,
-        title: "Jigokuraku",
-      },
-      {
         id: 52034,
         title: "[Oshi no Ko]",
       },
       {
+        id: 46569,
+        title: "Jigokuraku",
+      },
+      {
         id: 52211,
-        title: "MASHLE",
+        title: "Mashle",
       },
       {
         id: 54492,
@@ -1175,7 +1177,7 @@ export const alAnimeData = {
       },
       {
         id: 54112,
-        title: "Zom 100: Zombie ni Naru Made ni Shitai 100 no Koto",
+        title: "Zom 100: Zombie ni Naru made ni Shitai 100 no Koto",
       },
       {
         id: 53393,
@@ -1191,7 +1193,7 @@ export const alAnimeData = {
       },
       {
         id: 52347,
-        title: "Shangri-La Frontier",
+        title: "Shangri-La Frontier: Kusoge Hunter, Kamige ni Idoman to su",
       },
       {
         id: 52578,
@@ -1221,12 +1223,12 @@ export const alAnimeData = {
         title: "Dungeon Meshi",
       },
       {
-        id: 54900,
-        title: "WIND BREAKER",
+        id: 54744,
+        title: "Tokidoki Bosotto Russia-go de Dereru Tonari no Alya-san",
       },
       {
-        id: 54744,
-        title: "Tokidoki Bosotto Russiago de Dereru Tonari no Alya-san",
+        id: 54900,
+        title: "Wind Breaker",
       },
       {
         id: 58059,
@@ -1237,16 +1239,16 @@ export const alAnimeData = {
         title: "Yubisaki to Renren",
       },
       {
-        id: 57181,
-        title: "Ao no Hako",
-      },
-      {
         id: 57524,
         title: "Make Heroine ga Oosugiru!",
       },
       {
         id: 49613,
         title: "Chiyu Mahou no Machigatta Tsukaikata",
+      },
+      {
+        id: 57181,
+        title: "Ao no Hako",
       },
       {
         id: 58426,

@@ -1,4 +1,5 @@
 import { domToBlob } from "modern-screenshot";
+import { downloadFileName } from "../constants/brand";
 
 const imageToBlob = async (wrapper: HTMLDivElement | null) => {
     if (!wrapper) return;
@@ -9,6 +10,7 @@ const imageToBlob = async (wrapper: HTMLDivElement | null) => {
         if (el instanceof HTMLElement && el.classList.contains("remove")) {
           return false;
         }
+
         return true;
       },
     });
@@ -39,7 +41,7 @@ const imageToBlob = async (wrapper: HTMLDivElement | null) => {
 
     const a = document.createElement("a");
     a.href = url;
-    a.download = "anime-sedai.png";
+    a.download = `${downloadFileName}.png`;
     a.click();
 
     URL.revokeObjectURL(url);
