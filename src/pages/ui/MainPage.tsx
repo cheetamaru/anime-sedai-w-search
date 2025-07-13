@@ -6,6 +6,7 @@ import { alIds, getAnimeTitle, malIds } from "@/pages/utils/animeDataGetters";
 import { alAnimeData } from "@/pages/constants/anilistAnimeData";
 import { copyImage, downloadImage } from "../utils/imageUtils";
 import { siteName, siteUrl } from "../constants/brand";
+import { GeneralActions } from "@/pages/ui/GeneralActions";
 
 export const MainPage = () => {
   const [selectedAnime, setSelectedAnime] = useLocalStorage<number[]>(
@@ -231,41 +232,13 @@ export const MainPage = () => {
           </div>
         </div>
 
-        <div className="flex gap-2 justify-center">
-          <button
-            type="button"
-            className="border rounded-md px-4 py-2 inline-flex"
-            onClick={selectAllAnime}
-          >
-            Select all
-          </button>
-
-          {isClearButtonShown && (
-            <button
-              type="button"
-              className="border rounded-md px-4 py-2 inline-flex"
-              onClick={clearAllAnime}
-            >
-              Clear
-            </button>
-          )}
-
-          <button
-            type="button"
-            className="border rounded-md px-4 py-2 inline-flex"
-            onClick={copyCurrentChosenState}
-          >
-            Copy Image
-          </button>
-
-          <button
-            type="button"
-            className="border rounded-md px-4 py-2 inline-flex"
-            onClick={downloadCurrentState}
-          >
-            Download Image
-          </button>
-        </div>
+        <GeneralActions
+            isClearButtonShown={isClearButtonShown}
+            selectAllAnime={selectAllAnime}
+            clearAllAnime={clearAllAnime}
+            copyCurrentChosenState={copyCurrentChosenState}
+            downloadCurrentState={downloadCurrentState}
+        />
       </div>
       <Toaster />
     </>
