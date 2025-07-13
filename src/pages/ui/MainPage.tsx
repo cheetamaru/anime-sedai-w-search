@@ -8,6 +8,9 @@ import { copyImage, downloadImage } from "../utils/imageUtils";
 import { GeneralActions } from "@/pages/ui/GeneralActions";
 import GeneralSettings from "./GeneralSettings";
 import ListHeader from "./ListHeader";
+import { useDataSourceStorage } from "../hooks/useDataSourceStorage";
+import { isAnilistDataSource } from "../domain/AnimeDataSource";
+import { useAnimeTitleLangStorage } from "../hooks/useAnimeTitleLangStorage";
 
 
 const MainPage = () => {
@@ -16,21 +19,15 @@ const MainPage = () => {
     []
   );
 
-  const [dataSource] = useLocalStorage<"mal" | "anilist">(
-    "dataSource",
-    "mal"
-  );
+  const [dataSource] = useDataSourceStorage();
 
-  const [lang] = useLocalStorage<"romaji" | "russian">(
-    "lang",
-    "romaji"
-  );
+  const [lang] = useAnimeTitleLangStorage();
 
   const wrapper = useRef<HTMLDivElement>(null);
   const language = "en";
 
-  const animeData = dataSource === "anilist" ? alAnimeData : malAnimeData;
-  const ids = dataSource === "anilist" ? alIds : malIds;
+  const animeData = isAnilistDataSource(dataSource) ? alAnimeData : malAnimeData;
+  const ids = isAnilistDataSource(dataSource) ? alIds : malIds;
 
   const totalAnime = Object.values(animeData).flatMap((year) => {
     return year.map((item) => item.id).slice(0, 12);

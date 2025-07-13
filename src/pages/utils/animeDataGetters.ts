@@ -2,6 +2,7 @@ import { alAnimeData } from "@/pages/constants/anilistAnimeData"
 import { malAnimeData } from "@/pages/constants/malAnimeData";
 import { namesRu } from "@/pages/constants/translations";
 import { AnimeDataItem } from "@/pages/types/AnimeDataItem";
+import { AnimeTitleLang, isRussianTitleLang } from "../domain/AnimeTitleLang";
 
 export const malIds = new Set(
     Object.values(malAnimeData)
@@ -16,9 +17,9 @@ export const malIds = new Set(
   
   export const getAnimeTitle = (
     item: AnimeDataItem,
-    lang?: string
+    lang: AnimeTitleLang
   ) => {
-    if (lang === "russian") {
+    if (isRussianTitleLang(lang)) {
       return namesRu.get(item.id) ?? item.title;
     }
 

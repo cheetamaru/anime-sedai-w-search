@@ -1,39 +1,37 @@
 "use client"
 
-import { useLocalStorage } from "usehooks-ts";
+import { AnimeDataSource, isAnilistDataSource, isMalDataSource } from "../domain/AnimeDataSource";
+import { useDataSourceStorage } from "../hooks/useDataSourceStorage";
+import { useAnimeTitleLangStorage } from "../hooks/useAnimeTitleLangStorage";
+import { AnimeTitleLang, isRomajiTitleLang, isRussianTitleLang } from "../domain/AnimeTitleLang";
 
 const GeneralSettings: React.FC = () => {
-    const [dataSource, setDataSource] = useLocalStorage<"mal" | "anilist">(
-        "dataSource",
-        "mal"
-      );
-    
-      const [lang, setLang] = useLocalStorage<"romaji" | "russian">(
-        "lang",
-        "romaji"
-      );
+    const [dataSource, setDataSource] = useDataSourceStorage();
+    const [lang, setLang] = useAnimeTitleLangStorage();
+
+    const getButtonClasses = (isSelected?: boolean) => {
+        return `px-3 py-1 text-sm rounded transition-colors ${isSelectedClass(isSelected)}`
+    }
+
+    const isSelectedClass = (isSelected?: boolean) => {
+        return isSelected
+        ? "bg-blue-500 text-white"
+        : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+    }
 
     return <>
         <div className="flex flex-wrap justify-center mb-4 gap-4">
             <div className="flex items-center gap-2">
               <span className="text-sm text-gray-600">Source of data:</span>
               <button
-                className={`px-3 py-1 text-sm rounded transition-colors ${
-                  dataSource === "mal"
-                    ? "bg-blue-500 text-white"
-                    : "bg-gray-200 text-gray-700 hover:bg-gray-300"
-                }`}
-                onClick={() => setDataSource("mal")}
+                className={getButtonClasses(isMalDataSource(dataSource))}
+                onClick={() => setDataSource(AnimeDataSource.mal)}
               >
                 MyAnimeList
               </button>
               <button
-                className={`px-3 py-1 text-sm rounded transition-colors ${
-                  dataSource === "anilist"
-                    ? "bg-blue-500 text-white"
-                    : "bg-gray-200 text-gray-700 hover:bg-gray-300"
-                }`}
-                onClick={() => setDataSource("anilist")}
+                className={getButtonClasses(isAnilistDataSource(dataSource))}
+                onClick={() => setDataSource(AnimeDataSource.anilist)}
               >
                 AniList
               </button>
@@ -41,22 +39,14 @@ const GeneralSettings: React.FC = () => {
             <div className="flex items-center gap-2">
               <span className="text-sm text-gray-600">Title language:</span>
               <button
-                className={`px-3 py-1 text-sm rounded transition-colors ${
-                  lang === "romaji"
-                    ? "bg-blue-500 text-white"
-                    : "bg-gray-200 text-gray-700 hover:bg-gray-300"
-                }`}
-                onClick={() => setLang("romaji")}
+                className={getButtonClasses(isRomajiTitleLang(lang))}
+                onClick={() => setLang(AnimeTitleLang.romaji)}
               >
                 Romaji
               </button>
               <button
-                className={`px-3 py-1 text-sm rounded transition-colors ${
-                  lang === "russian"
-                    ? "bg-blue-500 text-white"
-                    : "bg-gray-200 text-gray-700 hover:bg-gray-300"
-                }`}
-                onClick={() => setLang("russian")}
+                className={getButtonClasses(isRussianTitleLang(lang))}
+                onClick={() => setLang(AnimeTitleLang.russian)}
               >
                 Russian
               </button>
