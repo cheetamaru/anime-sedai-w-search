@@ -10,7 +10,7 @@ import GeneralSettings from "./GeneralSettings";
 import ListHeader from "./ListHeader";
 import { useDataSourceStorage } from "../hooks/useDataSourceStorage";
 import { isAnilistDataSource } from "../domain/AnimeDataSource";
-import { AnimeByYearList } from "./AnimeByYearList";
+import { AnimeByYearList } from "./AnimeByYearList/AnimeByYearList";
 
 
 const MainPage = () => {
@@ -26,8 +26,10 @@ const MainPage = () => {
   const animeData = isAnilistDataSource(dataSource) ? alAnimeData : malAnimeData;
   const ids = isAnilistDataSource(dataSource) ? alIds : malIds;
 
+  const itemsInARow = 12;
+
   const totalAnime = Object.values(animeData).flatMap((year) => {
-    return year.map((item) => item.id).slice(0, 12);
+    return year.map((item) => item.id).slice(0, itemsInARow);
   }).length;
 
   const selectedAnimeSize = selectedAnime.filter((anime) =>
@@ -37,7 +39,7 @@ const MainPage = () => {
   const selectAllAnime = () => {
     setSelectedAnime(
         Object.values(animeData).flatMap((year) => {
-          return year.map((item) => item.id).slice(0, 12);
+          return year.map((item) => item.id).slice(0, itemsInARow);
         })
       );
   }
@@ -101,6 +103,7 @@ const MainPage = () => {
                 animeData={animeData}
                 selectedAnime={selectedAnime}
                 handleClick={handleClick}
+                itemsInARow={itemsInARow}
               />
             </div>
           </div>
