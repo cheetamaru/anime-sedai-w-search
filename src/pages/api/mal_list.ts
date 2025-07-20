@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { getFullMalList } from '../serverUtils/getFullMalList';
+import { getIntersectedMalList } from '../serverUtils/getIntersectedMalList';
 
 export default async function handler(
   req: NextApiRequest,
@@ -8,7 +8,7 @@ export default async function handler(
   try {
     const { username } = req.query
 
-    const result = await getFullMalList(String(username));
+    const result = await getIntersectedMalList(String(username));
 
     res.status(200).json({ result })
   } catch (err) {
