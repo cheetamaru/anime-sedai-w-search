@@ -6,4 +6,3 @@ Inspired by:
 
 Issues List:
 - [ ] Image Copy does not work on some phones
-- [ ] SSR warnings on watched anime count

@@ -30,7 +30,7 @@ export const UsernameSearch = () => {
 
 
     return <>
-        <div className="flex items-center w-full max-w-md mx-auto border border-gray-300 rounded-md overflow-hidden shadow-sm mb-4">
+        <div className="flex items-center w-full max-w-xs mx-auto border border-gray-300 rounded-md overflow-hidden shadow-sm mb-4">
           <div className="relative flex-1">
             <input
               type="text"

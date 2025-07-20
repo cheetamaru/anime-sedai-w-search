@@ -11,6 +11,7 @@ import { useDataSourceStorage } from "../hooks/useDataSourceStorage";
 import { isAnilistDataSource } from "../domain/AnimeDataSource";
 import { AnimeByYearList } from "./AnimeByYearList/AnimeByYearList";
 import { useSelectedAnimeStorage } from "../hooks/useSelectedAnimeStorage";
+import { CopyrightFooter } from "./CopyrightFooter";
 
 
 const MainPage = () => {
@@ -114,6 +115,7 @@ const MainPage = () => {
             downloadCurrentState={downloadCurrentState}
         />
       </div>
+      <CopyrightFooter />
       <Toaster />
     </>
   );
