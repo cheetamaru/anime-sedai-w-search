@@ -1,26 +1,14 @@
-import { malApiAdapter } from '@/services/api/myAnimeListApiAdapter'
-import { MalGetListParams } from '@/services/api/types/MalGetListParams';
 import type { NextApiRequest, NextApiResponse } from 'next'
-
-const defaultParams: MalGetListParams = {
-  status: "completed"
-}
+import { getFullMalList } from '../serverUtils/getFullMalList';
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
   try {
-    const { username, limit, offset } = req.query
+    const { username } = req.query
 
-    const result = await malApiAdapter.getUserAnimeList({
-      username: String(username),
-      params: {
-        ...defaultParams,
-        limit: limit ? Number(limit) : undefined,
-        offset: offset ? Number(offset) : undefined
-      }
-    });
+    const result = await getFullMalList(String(username));
 
     res.status(200).json({ result })
   } catch (err) {
