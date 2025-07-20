@@ -1,4 +1,5 @@
-import { toQueryString } from "@/pages/utils/toQueryString";
+
+import { toQueryString } from "@/modules/utils/toQueryString";
 import { MalGetListParams } from "./types/MalGetListParams";
 
 type GetUserAnimeListParams = {

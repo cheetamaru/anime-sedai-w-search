@@ -1,4 +1,4 @@
-import { AnimeDataCollection } from "../../types/AnimeDataCollection";
+import { AnimeDataCollection } from "../../../modules/types/AnimeDataCollection";
 import { AnimeByYearItemsList } from "./AnimeByYearItemsList";
 
 type Props = {

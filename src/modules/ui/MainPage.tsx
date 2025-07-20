@@ -1,16 +1,16 @@
 import { useRef } from "react";
 import { toast, Toaster } from "sonner";
-import { malAnimeData } from "@/pages/constants/malAnimeData";
-import { alIds, malIds } from "@/pages/utils/animeDataGetters";
-import { alAnimeData } from "@/pages/constants/anilistAnimeData";
+import { malAnimeData } from "@/modules/constants/malAnimeData";
+import { alIds, malIds } from "@/modules/utils/animeDataGetters";
+import { alAnimeData } from "@/modules/constants/anilistAnimeData";
 import { copyImage, downloadImage } from "../utils/imageUtils";
-import { GeneralActions } from "@/pages/ui/GeneralActions";
+import { GeneralActions } from "@/modules/ui/GeneralActions";
 import GeneralSettings from "./GeneralSettings";
 import ListHeader from "./ListHeader";
-import { useDataSourceStorage } from "../hooks/useDataSourceStorage";
+import { useDataSourceStorage } from "../../modules/hooks/useDataSourceStorage";
 import { isAnilistDataSource } from "../domain/AnimeDataSource";
 import { AnimeByYearList } from "./AnimeByYearList/AnimeByYearList";
-import { useSelectedAnimeStorage } from "../hooks/useSelectedAnimeStorage";
+import { useSelectedAnimeStorage } from "../../modules/hooks/useSelectedAnimeStorage";
 import { CopyrightFooter } from "./CopyrightFooter";
 
 

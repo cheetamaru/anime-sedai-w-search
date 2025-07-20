@@ -1,4 +1,4 @@
-import { AnimeDataItem } from "@/pages/types/AnimeDataItem";
+import { AnimeDataItem } from "@/modules/types/AnimeDataItem";
 
 export const namesRu = new Map<AnimeDataItem['id'], AnimeDataItem['title']>([
     [19, "Монстр"],

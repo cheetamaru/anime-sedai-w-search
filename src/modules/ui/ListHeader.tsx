@@ -1,6 +1,6 @@
 "use client"
 
-import { siteName, siteUrl } from "../constants/brand"
+import { siteName, siteUrl } from "../../modules/constants/brand"
 
 type Props = {
     selectedAnimeSize: number;

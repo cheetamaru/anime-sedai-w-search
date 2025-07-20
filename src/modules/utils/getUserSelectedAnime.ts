@@ -1,4 +1,4 @@
-import { AnimeDataItem } from "../types/AnimeDataItem";
+import { AnimeDataItem } from "../../modules/types/AnimeDataItem";
 import { toast } from "sonner";
 
 export const getUserSelectedAnime = async (username: string) => {

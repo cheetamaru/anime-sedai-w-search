@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useSelectedAnimeStorage } from "../hooks/useSelectedAnimeStorage";
+import { useSelectedAnimeStorage } from "../../modules/hooks/useSelectedAnimeStorage";
 import { getUserSelectedAnime } from "../utils/getUserSelectedAnime";
 
 export const UsernameSearch = () => {

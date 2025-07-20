@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { getIntersectedMalList } from '../serverUtils/getIntersectedMalList';
+import { getIntersectedMalList } from '../../modules/serverUtils/getIntersectedMalList';
 
 export default async function handler(
   req: NextApiRequest,

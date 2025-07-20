@@ -1,5 +1,5 @@
 import { domToBlob } from "modern-screenshot";
-import { downloadFileName } from "../constants/brand";
+import { downloadFileName } from "../../modules/constants/brand";
 
 const imageToBlob = async (wrapper: HTMLDivElement | null) => {
     if (!wrapper) return;

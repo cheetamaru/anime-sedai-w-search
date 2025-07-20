@@ -1,8 +1,8 @@
 "use client"
 
 import { AnimeDataSource, isAnilistDataSource, isMalDataSource } from "../domain/AnimeDataSource";
-import { useDataSourceStorage } from "../hooks/useDataSourceStorage";
-import { useAnimeTitleLangStorage } from "../hooks/useAnimeTitleLangStorage";
+import { useDataSourceStorage } from "../../modules/hooks/useDataSourceStorage";
+import { useAnimeTitleLangStorage } from "../../modules/hooks/useAnimeTitleLangStorage";
 import { AnimeTitleLang, isRomajiTitleLang, isRussianTitleLang } from "../domain/AnimeTitleLang";
 import { UsernameSearch } from "./UsernameSearch";
 

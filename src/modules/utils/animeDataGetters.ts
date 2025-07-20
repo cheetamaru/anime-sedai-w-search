@@ -1,7 +1,7 @@
-import { alAnimeData } from "@/pages/constants/anilistAnimeData"
-import { malAnimeData } from "@/pages/constants/malAnimeData";
-import { namesRu } from "@/pages/constants/translations";
-import { AnimeDataItem } from "@/pages/types/AnimeDataItem";
+import { alAnimeData } from "@/modules/constants/anilistAnimeData"
+import { malAnimeData } from "@/modules/constants/malAnimeData";
+import { namesRu } from "@/modules/constants/translations";
+import { AnimeDataItem } from "@/modules/types/AnimeDataItem";
 import { AnimeTitleLang, isRussianTitleLang } from "../domain/AnimeTitleLang";
 
 export const malIds = new Set(

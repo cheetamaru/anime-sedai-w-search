@@ -1,6 +1,6 @@
-import { useAnimeTitleLangStorage } from "@/pages/hooks/useAnimeTitleLangStorage";
-import { AnimeDataItem } from "@/pages/types/AnimeDataItem";
-import { getAnimeTitle } from "@/pages/utils/animeDataGetters";
+import { useAnimeTitleLangStorage } from "@/modules/hooks/useAnimeTitleLangStorage";
+import { AnimeDataItem } from "@/modules/types/AnimeDataItem";
+import { getAnimeTitle } from "@/modules/utils/animeDataGetters";
 
 type Props = {
     items: AnimeDataItem[];
