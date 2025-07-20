@@ -7,7 +7,7 @@ type GetUserAnimeListParams = {
 }
 
 const getUserAnimeList = async ({
-    username = "lys1n",
+    username,
     params
 }: GetUserAnimeListParams) => {
     const val = process.env.MAL_CLIENT_ID

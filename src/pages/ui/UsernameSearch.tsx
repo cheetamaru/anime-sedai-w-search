@@ -28,6 +28,7 @@ export const UsernameSearch = () => {
         setSelectedAnime(selected)
     }
 
+    const isButtonDisabled = loading || username === ""
 
     return <>
         <div className="flex items-center w-full max-w-xs mx-auto border border-gray-300 rounded-md overflow-hidden shadow-sm mb-4">
@@ -55,11 +56,11 @@ export const UsernameSearch = () => {
           <button
             type="submit"
             onClick={handleRequest}
-            disabled={loading}
-            className={`px-4 py-2 text-sm font-medium text-white transition-colors ${
-              loading
-                ? 'bg-gray-400 cursor-not-allowed'
-                : 'bg-blue-500 hover:bg-blue-700'
+            disabled={isButtonDisabled}
+            className={`px-4 py-2 text-sm font-medium transition-colors ${
+              isButtonDisabled
+                ? 'bg-gray-200 text-gray-600 cursor-not-allowed'
+                : 'bg-blue-500 text-white hover:bg-blue-700'
             }`}
           >
             {loading ? 'Loading' : 'Search'}
