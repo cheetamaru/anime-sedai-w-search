@@ -1,6 +1,5 @@
 import { useRef } from "react";
 import { toast, Toaster } from "sonner";
-import { useLocalStorage } from "usehooks-ts";
 import { malAnimeData } from "@/pages/constants/malAnimeData";
 import { alIds, malIds } from "@/pages/utils/animeDataGetters";
 import { alAnimeData } from "@/pages/constants/anilistAnimeData";
@@ -11,13 +10,11 @@ import ListHeader from "./ListHeader";
 import { useDataSourceStorage } from "../hooks/useDataSourceStorage";
 import { isAnilistDataSource } from "../domain/AnimeDataSource";
 import { AnimeByYearList } from "./AnimeByYearList/AnimeByYearList";
+import { useSelectedAnimeStorage } from "../hooks/useSelectedAnimeStorage";
 
 
 const MainPage = () => {
-  const [selectedAnime, setSelectedAnime] = useLocalStorage<number[]>(
-    "selectedAnimeIds",
-    []
-  );
+  const [selectedAnime, setSelectedAnime] = useSelectedAnimeStorage();
 
   const [dataSource] = useDataSourceStorage();
 

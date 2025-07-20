@@ -4,6 +4,7 @@ import { AnimeDataSource, isAnilistDataSource, isMalDataSource } from "../domain
 import { useDataSourceStorage } from "../hooks/useDataSourceStorage";
 import { useAnimeTitleLangStorage } from "../hooks/useAnimeTitleLangStorage";
 import { AnimeTitleLang, isRomajiTitleLang, isRussianTitleLang } from "../domain/AnimeTitleLang";
+import { UsernameSearch } from "./UsernameSearch";
 
 const GeneralSettings = () => {
     const [dataSource, setDataSource] = useDataSourceStorage();
@@ -20,6 +21,7 @@ const GeneralSettings = () => {
     }
 
     return <>
+        <UsernameSearch />
         <div className="flex flex-wrap justify-center mb-4 gap-4">
             <div className="flex items-center gap-2">
               <span className="text-sm text-gray-600">Source of data:</span>
